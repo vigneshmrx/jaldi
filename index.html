@@ -17,13 +17,13 @@
       body {
         background-color: var(--main-white);
         color: var(--main-black);
-        /* font-family: "Roboto Mono", monospace; */
       }
 
       .pwd-page {
         position: fixed;
         width: 100%;
         height: 100%;
+        display: -ms-grid;
         display: grid;
         place-items: center;
       }
@@ -35,6 +35,7 @@
       fieldset {
         width: 100%;
         padding: 15px;
+        -webkit-box-shadow: 10px 10px var(--main-black);
         box-shadow: 10px 10px var(--main-black);
       }
 
@@ -43,22 +44,20 @@
         background-color: var(--main-black);
         color: var(--main-white);
         letter-spacing: 1.1px;
-        /* border-radius: 5px; */
         text-transform: uppercase;
       }
 
-      input[type=password] {
+      input[type="password"] {
         width: 100%;
         padding: 3px 3px;
       }
 
-      input[type=button] {
+      input[type="button"] {
         width: 85px;
         padding: 3px 0px;
         background-color: var(--main-black);
         color: var(--main-white);
         letter-spacing: 1.1px;
-        /* border-radius: 5px; */
       }
 
       .container {
@@ -85,6 +84,8 @@
       }
 
       .flex-area {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -123,8 +124,8 @@
         <form action="">
           <fieldset>
             <legend>Enter Password</legend>
-            <input type="password"><br><br>
-            <input type="button" value="SUBMIT" onclick="checkPwd();">
+            <input type="password" /><br /><br />
+            <input type="button" value="SUBMIT" onclick="checkPwd();" />
           </fieldset>
         </form>
       </div>

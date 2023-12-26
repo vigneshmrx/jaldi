@@ -1,5 +1,4 @@
 let checkPwdPage = document.getElementsByClassName("pwd-page")[0];
-const l = ["hello", "72525", "namaste", "030916"];
 
 const fillIt = (boolVal) => {
     let content = `<div class="container">
@@ -511,8 +510,6 @@ const fillIt = (boolVal) => {
   }
 }
 
-// fillIt();
-
 const a = (theNo) => {
     return (theNo * theNo);
 }
@@ -532,6 +529,7 @@ const b = (theNo) => {
 }
 
 const checkPwd = () => {
+    const l = ["hello", "72525", "namaste", "030916"];
     let enteredPwd = document.getElementsByTagName("input")[0].value;
     
     let aNo = parseInt(enteredPwd.substr(0, 2));
