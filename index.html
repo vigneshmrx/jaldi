@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy Access</title>
     <link rel="stylesheet" href="common.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
@@ -19,62 +20,19 @@
         color: var(--main-black);
       }
 
-      .pwd-page {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        display: -ms-grid;
-        display: grid;
-        place-items: center;
-      }
-
-      .pwd-area {
-        width: 60%;
-      }
-
       fieldset {
-        width: 100%;
-        padding: 15px;
         -webkit-box-shadow: 10px 10px var(--main-black);
         box-shadow: 10px 10px var(--main-black);
       }
 
       legend {
-        padding: 5px 10px;
         background-color: var(--main-black);
         color: var(--main-white);
-        letter-spacing: 1.1px;
-        text-transform: uppercase;
-      }
-
-      input[type="password"] {
-        width: 100%;
-        padding: 3px 3px;
       }
 
       input[type="button"] {
-        width: 85px;
-        padding: 3px 0px;
         background-color: var(--main-black);
         color: var(--main-white);
-        letter-spacing: 1.1px;
-      }
-
-      .container {
-        width: 60%;
-        margin: 20px auto;
-        /* border: 1px solid red; */
-        padding: 10px;
-      }
-
-      .container h2 {
-        text-align: center;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
-
-      .container h4 {
-        letter-spacing: 1.3px;
       }
 
       .underline-box {
@@ -83,49 +41,19 @@
         background-color: var(--indigo);
       }
 
-      .flex-area {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 15px;
-      }
-
-      .left {
-        width: 60%;
-        margin-right: 5px;
-      }
-
-      .right {
-        width: 40%;
-        font-weight: bold;
-        margin-left: 5px;
-      }
-
       span {
         color: var(--indigo);
-      }
-
-      @media (max-width: 600px) {
-        .container {
-          width: 90%;
-        }
-
-        .pwd-area {
-          width: 90%;
-        }
       }
     </style>
   </head>
   <body>
-    <div class="pwd-page">
-      <div class="pwd-area">
+    <div class="pwd-page fixed w-full h-full grid place-items-center">
+      <div class="pwd-area w-4/5 sm:w-3/5">
         <form action="">
-          <fieldset>
-            <legend>Enter Password</legend>
-            <input type="password" /><br /><br />
-            <input type="button" value="SUBMIT" onclick="checkPwd();" />
+          <fieldset class="w-full p-4 border-2 border-solid border-black">
+            <legend class="px-2.5 py-1.5 tracking-widest uppercase">Enter Password</legend>
+            <input type="password" class="w-full p-1  border-2 border-solid border-black" /><br /><br />
+            <input type="button" class="w-20 py-1 tracking-widest" value="SUBMIT" onclick="checkPwd();" />
           </fieldset>
         </form>
       </div>

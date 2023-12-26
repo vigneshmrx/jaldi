@@ -505,6 +505,51 @@ const fillIt = (boolVal) => {
   if (boolVal) {
     checkPwdPage.style.visibility = "hidden";
     pgKaBdy.innerHTML = content;
+
+    let container = document.getElementsByClassName("container")[0];
+
+    container.classList.add("w-4/5");
+    container.classList.add("sm:w-3/5");
+    container.classList.add("p-2.5");
+    container.classList.add("my-5");
+    container.classList.add("mx-auto");
+
+    let hTwo = document.getElementsByTagName("h2")[0];
+
+    hTwo.classList.add("uppercase");
+    hTwo.classList.add("tracking-widest");
+    hTwo.classList.add("text-center");
+    hTwo.classList.add("font-bold");
+
+    let hFour = Array.from(document.getElementsByTagName("h4"));
+
+    hFour.forEach((ele) => {
+      ele.classList.add("tracking-wide");
+      ele.classList.add("font-bold");
+    });
+
+    let flexArea = Array.from(document.getElementsByClassName("flex-area"));
+
+    flexArea.forEach((elem) => {
+      elem.classList.add("flex");
+      elem.classList.add("my-2.5");
+      elem.classList.add("text-base");
+    });
+
+    let leftArea = Array.from(document.getElementsByClassName("left"));
+
+    leftArea.forEach((leftEle) => {
+      leftEle.classList.add("w-3/5");
+      leftEle.classList.add("mr-1.5");
+    });
+
+    let rightArea = Array.from(document.getElementsByClassName("right"));
+
+    rightArea.forEach((rightEle) => {
+      rightEle.classList.add("w-2/5");
+      rightEle.classList.add("ml-1.5");
+      rightEle.classList.add("font-bold");
+    });
   } else {
     pgKaBdy.innerHTML = "<h2>ACCESS DENIED</h2>";
   }
@@ -516,12 +561,9 @@ const a = (theNo) => {
 
 const b = (theNo) => {
     let n = 0;
-    console.log(theNo);
     while (theNo > 0) {
         d = theNo % 10;
-        console.log(d);
         n = n * 10 + d;
-        console.log(n);
         theNo = parseInt(theNo / 10);
     }
 
@@ -539,9 +581,6 @@ const checkPwd = () => {
     bNo = a(b(bNo));
 
     let theRest = enteredPwd.substr(2, enteredPwd.length - 4);
-    console.log(theRest);
-
-    console.log(aNo + " " + bNo);
 
     if ((aNo == bNo) && l.includes(theRest)) {
         fillIt(true);
