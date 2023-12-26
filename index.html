@@ -9,10 +9,56 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
+      * {
+        font-family: "Roboto Mono", monospace;
+        margin: 0;
+      }
+
       body {
         background-color: var(--main-white);
         color: var(--main-black);
-        font-family: "Roboto Mono", monospace;
+        /* font-family: "Roboto Mono", monospace; */
+      }
+
+      .pwd-page {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+      }
+
+      .pwd-area {
+        width: 60%;
+      }
+
+      fieldset {
+        width: 100%;
+        padding: 15px;
+        box-shadow: 10px 10px var(--main-black);
+      }
+
+      legend {
+        padding: 5px 10px;
+        background-color: var(--main-black);
+        color: var(--main-white);
+        letter-spacing: 1.1px;
+        /* border-radius: 5px; */
+        text-transform: uppercase;
+      }
+
+      input[type=password] {
+        width: 100%;
+        padding: 3px 3px;
+      }
+
+      input[type=button] {
+        width: 85px;
+        padding: 3px 0px;
+        background-color: var(--main-black);
+        color: var(--main-white);
+        letter-spacing: 1.1px;
+        /* border-radius: 5px; */
       }
 
       .container {
@@ -60,422 +106,28 @@
         color: var(--indigo);
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 600px) {
         .container {
+          width: 90%;
+        }
+
+        .pwd-area {
           width: 90%;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h2>Easy Access</h2>
-
-      <h4>FAMILY</h4>
-      <div class="underline-box"></div>
-      <br />
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">Familia Navratri {23}</div>
-        <div class="right">Per // 2023 // Navratri<span>[DGMM]</span></div>
+    <div class="pwd-page">
+      <div class="pwd-area">
+        <form action="">
+          <fieldset>
+            <legend>Enter Password</legend>
+            <input type="password"><br><br>
+            <input type="button" value="SUBMIT" onclick="checkPwd();">
+          </fieldset>
+        </form>
       </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">Familia Diwali {23}</div>
-        <div class="right">
-            Per // Familia // Diwali<span>[DGMM]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">Familia Random {23}</div>
-        <div class="right">
-            Per // Familia // Radom<span><span>[DGMM]</span></span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">Dadi Bday</div>
-        <div class="right">Per // 2023 // Dadi Bday<span>[DGMM]</span></div>
-      </div>
-
-      <hr />
-
-      <div class="flex-area">
-        <div class="left">Onam + Nana & Mum + Others</div>
-        <div class="right">
-          Alb // Fam<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Uk {23}
-        </div>
-        <div class="right">
-          Alb // Fam + Friends // Uk {23}<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Mum + Naina Aunty + Aaron
-        </div>
-        <div class="right">
-          Alb // Fam + Friends<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <br><br><br>
-      <h4>PERSONAL</h4>
-      <div class="underline-box"></div>
-      <br />
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">College Dusshera</div>
-        <div class="right">Per // 2023 // clg-zindagi // dusshera<span>[DGMM]</span></div>
-      </div>
-
-      <hr />
-
-      <div class="flex-area">
-        <div class="left">K-pop + Gandhi Park</div>
-        <div class="right">Per // 2023 // Clg Zindagi // k-pop + ...<span>[DGMM]</span></div>
-      </div>
-
-      <hr />
-
-      <div class="flex-area">
-        <div class="left">
-          Clg + Everyone + class + ziya + otaku + deepz + anju + anu + nino +
-          teachers...
-        </div>
-
-        <div class="right">Per // 2023 // Clg Zindagi // Others<span>[DGMM]</span></div>
-      </div>
-
-      <hr />
-
-      <div class="flex-area">
-        <div class="left">The Final Days</div>
-
-        <div class="right">Per // 2023 // Clg Zindagi // Final Days<span>[DGMM]</span></div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">Airplanes</div>
-        <div class="right">Per  // Airplanes<span>[DGMM]</span></div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          16th Sep {23}
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // 16th Sep {23}<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          19th Jul | Fiza Nexus Jaga {23}
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // 19th Jul {23}<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Pratham Cam
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // Cam<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Onam + group + teachers + others {23}
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // Others<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Freshers {23}
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // Freshers<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Teachers
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // Teachers<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Talents Day + Panumbur Dariyo {23}
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // Talents.... + Panumbur...<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Traditional Day {23}
-        </div>
-        <div class="right">
-          Alb // Clg Zindagi // Traditional...<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Nandu + Ramu + Lachu + Anu + Rosh + Amu + Others
-        </div>
-        <div class="right">
-          Alb // Sab Log<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-      <br><br><br>
-      <h4>PEOPLE</h4>
-      <div class="underline-box"></div>
-      <br />
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Harsh
-        </div>
-        <div class="right">
-          Alb // Log // Harsh<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Amruta
-        </div>
-        <div class="right">
-          Alb // Log // Amruta<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Brino
-        </div>
-        <div class="right">
-          Alb // Log // Brino<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Deepika
-        </div>
-        <div class="right">
-          Alb // Log // Deepika<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Jisoo
-        </div>
-        <div class="right">
-          Alb // Log // Jisoo<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Gayathri (Go3)
-        </div>
-        <div class="right">
-          Alb // Log // Gayathri (Go3)<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Kishan
-        </div>
-        <div class="right">
-          Alb // Log // Kishan<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Lakshmi (lachu)
-        </div>
-        <div class="right">
-          Alb // Log // Lakshmi (lachu)<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Mee
-        </div>
-        <div class="right">
-          Alb // Log // Mee<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Nazneen
-        </div>
-        <div class="right">
-          Alb // Log // Nazneen<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Neha (Clg)
-        </div>
-        <div class="right">
-          Alb // Log // Neha (Clg)<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Olivia
-        </div>
-        <div class="right">
-          Alb // Log // Olivia<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Rachana
-        </div>
-        <div class="right">
-          Alb // Log // Rachana<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Shreeraksha
-        </div>
-        <div class="right">
-          Alb // Log // Shreeraksha<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Suraj (School)
-        </div>
-        <div class="right">
-          Alb // Log // Suraj (School)<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Trisha
-        </div>
-        <div class="right">
-          Alb // Log // Trisha<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="flex-area">
-        <div class="left">
-          Shaziya
-        </div>
-        <div class="right">
-          Alb // Log // Shaziya<span>[DMV5]</span>
-        </div>
-      </div>
-
-      <hr>
-
     </div>
   </body>
   <script src="script.js"></script>
