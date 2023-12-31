@@ -1,63 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Easy Access</title>
-    <link rel="stylesheet" href="common.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easy Access</title>
+  <link rel="stylesheet" href="common.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-      * {
-        font-family: "Roboto Mono", monospace;
-        margin: 0;
-      }
+  <script defer>
+    if (sessionStorage.getItem("pwdCorrect") == null) {
+      console.log(sessionStorage.getItem("pwdCorrect"));
+      window.location.replace("pwd.html");
+    }
+  </script>
+</head>
 
-      body {
-        background-color: var(--main-white);
-        color: var(--main-black);
-      }
+<body onload="fillIt();">
+  <div class="navbar flex items-center justify-evenly px-2.5 py-5">
+    <div class="item border-b-4"><a href="#">Details</a></div>
+    <div class="item"><a href="bdays.html">Bdays</a></div>
+  </div>
+</body>
+<script src="script.js"></script>
 
-      fieldset {
-        -webkit-box-shadow: 10px 10px var(--main-black);
-        box-shadow: 10px 10px var(--main-black);
-      }
-
-      legend {
-        background-color: var(--main-black);
-        color: var(--main-white);
-      }
-
-      input[type="button"] {
-        background-color: var(--main-black);
-        color: var(--main-white);
-      }
-
-      .underline-box {
-        width: 60px;
-        height: 5px;
-        background-color: var(--indigo);
-      }
-
-      span {
-        color: var(--indigo);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="pwd-page fixed w-full h-full grid place-items-center">
-      <div class="pwd-area w-4/5 sm:w-3/5">
-        <form action="">
-          <fieldset class="w-full p-4 border-2 border-solid border-black">
-            <legend class="px-2.5 py-1.5 tracking-widest uppercase">Enter Password</legend>
-            <input type="password" class="w-full p-1  border-2 border-solid border-black" /><br /><br />
-            <input type="button" class="w-20 py-1 tracking-widest" value="SUBMIT" onclick="checkPwd();" />
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  </body>
-  <script src="script.js"></script>
 </html>
