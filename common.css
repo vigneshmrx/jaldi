@@ -8,6 +8,10 @@
   --secondary-black: #242223;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
