@@ -483,6 +483,8 @@ const fillBdays = () => {
   if (sessionStorage.getItem("pwdCorrect") == "yes" && sessionStorage.getItem("pwdChecked") == "yes") {
     let bdayArray = [["Jan", 8, "Trisha"], ["Jan", 8, "Vaishnavi"], ["Jan", 16, "Didi"], ["Jan", 25, "Rajal"], ["Jan", 27, "Snehal"], ["Mar", 10, "Aishu (SIMS)"], ["Apr", 11, "Abhiram"], ["Apr", 19, "Brino"], ["Apr", 22, "Rachana"], ["Apr", 23, "Kumar"], ["May", 11, "Shravya"], ["May", 24, "Neha (SIMS)"], ["Jun", 12, "Raksha (GF)"], ["Jun", 16, "Darshan"], ["Jun", 20, "Vaishnavi (Goa)"], ["Jun", 23, "Deepz"], ["Jul", 1, "Ziya"], ["Jul", 14, "Anju"], ["Jul", 31, "Wizz"], ["Aug", 1, "Pratham"], ["Sep", 12, "Akash V"], ["Sep", 19, "Aaron"], ["Oct", 3, "Nivedh"], ["Nov", 3, "Otaku"], ["Nov", 5, "Nandu"], ["Nov", 14, "Anu Behen"], ["Nov", 20, "Sanjay (SIMS)"], ["Nov", 27, "Vinti"], ["Dec", 8, "Janani Miss"], ["Dec", 21, "Rohit (SIMS)"]];
 
+    let printedArr = [];
+
     let bdaysContainer = document.getElementsByClassName("bdays-container")[0];
 
     bdayArray.forEach((detArr) => {
@@ -493,8 +495,15 @@ const fillBdays = () => {
         date = detArr[1];
       }
 
-      bdaysContainer.innerHTML += `<div class="flex-area flex my-2.5 text-base"><div class="left w-1/3 mr-1.5 text-center uppercase">${detArr[0]}</div><div class="middle  w-1/3 mr-1.5 ml-1.5 text-center">${date}</div><div class="right  w-1/3 ml-1.5 text-center font-bold">${detArr[2]}</div></div><hr>`;
+      if (!(printedArr.includes(detArr[0])) && detArr[0] != "Jan") {
+        bdaysContainer.innerHTML += "<div class='w-1/5 h-1 mx-auto' style='background: black;'></div><br />";
+        printedArr.push(detArr[0]);
+      }
+
+      bdaysContainer.innerHTML += `<div class="flex-area flex my-2.5 text-base"><div class="left w-1/3 mr-1.5 text-center uppercase">${detArr[0]}</div><div class="middle  w-1/3 mr-1.5 ml-1.5 text-center">${date}</div><div class="right  w-1/3 ml-1.5 text-center font-bold">${detArr[2]}</div></div>`;
     });
+
+    bdaysContainer.innerHTML += "<div class='w-1/5 h-1 mx-auto' style='background: black;'>";
 
   } else if (sessionStorage.getItem("pwdCorrect") == "no") {
     pgKaBdy.innerHTML = "<h2>ACCESS DENIED</h2>";
