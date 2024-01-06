@@ -8,7 +8,7 @@ const fillIt = () => {
     console.log(sessionStorage.getItem("pwdCorrect"));
     let content = `<div class="container w-full sm:w-3/5 p-2.5 my-5 mx-1.5 mx-auto index-container">
     <h2 class="uppercase tracking-widest text-center font-bold text-2xl">Easy Access</h2>
-    <br /><br />
+    <br />
 
     <h4 class="tracking-wide font-bold">FAMILY</h4>
     <div class="underline-box"></div>
@@ -74,6 +74,14 @@ const fillIt = () => {
     <div class="flex-area flex my-2.5 text-base">
       <div class="left w-2/5 mr-1.5">Fui & Fua Anni</div>
       <div class="middle w-2/5 mr-1.5 ml-1.5 font-bold">Alb // Fui & Fua 25</div>
+      <div class="right w-1/5 ml-1.5 text-center"><span>[DMV5]</span></div>
+    </div>
+
+    <hr />
+
+    <div class="flex-area flex my-2.5 text-base">
+      <div class="left w-2/5 mr-1.5">Nashik + Mumbai (Dada & I) {24}</div>
+      <div class="middle w-2/5 mr-1.5 ml-1.5 font-bold">Alb // 2024 // Nashik + Bumbay</div>
       <div class="right w-1/5 ml-1.5 text-center"><span>[DMV5]</span></div>
     </div>
 
@@ -467,7 +475,6 @@ const fillIt = () => {
     window.location.replace("pwd.html");
   }
   else if (sessionStorage.getItem("pwdCorrect") == "no") {
-    console.log("In second else if");
     pgKaBdy.innerHTML = "<h2>ACCESS DENIED</h2>";
   }
 }
